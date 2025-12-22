@@ -1,22 +1,29 @@
-const express = require ('express');
-
-const path = require('path');
+import express from 'express';
+import post from './routes/posts.js';
+import logger  from './middleware/logger.js';  
+import errorHandler from './middleware/error.js'; 
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT;
 
-let post = [
-    {id:1, post:"Post 1"},
-    {id:2, post:"Post 2"},
-    {id:3, post:"Post 3"}]
+//Body Parser
+app.use(express.json());
+app.use (express.urlencoded({extended:false}));
+app.use(logger); 
 
-app.get('/',(req,res)=>{
-    res.json(post);
+app.use('/api/posts', post);
+
+app.use((req,res,next)=>{
+    const error = new Error('Not Found');
+    error.status =404 ;
+    next(error);
+
 })
+app.use(errorHandler);
 
-app.get('/about',(req,res)=>{
-    res.send("about page")
-})
 
-app.listen(port,()=>console.log('Server is running'));
+
+
+
+app.listen(port,()=>console.log(`Server is running at  ${port}`));
