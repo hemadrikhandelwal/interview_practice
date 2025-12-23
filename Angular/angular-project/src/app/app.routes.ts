@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { Rxjs } from '../rxjs/rxjs';
 import { SubjectComponent } from '../rxjs/subject/subject';
+import { LifeCycle } from '../life-cycle/life-cycle';
+import { Parent } from '../parent/parent';
 
 export const routes: Routes = [
     
@@ -9,5 +11,12 @@ export const routes: Routes = [
             {path:'subject',component:SubjectComponent}
         ]
 
+    },
+    {
+        path:'life-cycle',component:LifeCycle
+    },
+    {
+        path:'parent',component:Parent
     }
+
 ];
