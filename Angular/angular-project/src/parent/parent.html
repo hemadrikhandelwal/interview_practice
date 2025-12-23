@@ -1,0 +1,11 @@
+<p>parent works!</p>
+
+<button (click)="togglechild()">Toogle Child</button>
+<input type="text" [(ngModel)]="channelName"/>
+
+
+@if(showChild){
+
+    <app-child [nameofChannel]="channelName"></app-child>
+
+}
