@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, SimpleChange } from '@angular/core';
+import { Component, ContentChild, Input, SimpleChange } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,23 +12,35 @@ import { FormsModule } from '@angular/forms';
 export class Child {
 
   
-  @Input() nameofChannel = ''; 
+  @Input() nameofChannel =''; 
+
+  @ContentChild('parentTempl') projectContent:any;
 
   constructor(){
-    console.warn("chidlconstructos  is called")
+    console.warn("chidlconstructos  is called",this.nameofChannel)
   }
 
   ngOnInit(){
-    console.warn("ngoninit of child ")
+    console.warn("ngoninit of child ",this.nameofChannel)
+    console.log("oninit -"+this.projectContent);
   }
 
   
   ngOnChanges(chnages:SimpleChange){
     console.log(chnages);
     console.warn('the onchnage of child');
+        console.log("Dochanges -"+this.projectContent);
   }
 
   ngDoCheck(){
     console.warn("child deo check ");
+        console.log("do check -"+this.projectContent);
+
+  }
+
+  ngAfterContentInit(){
+    console.warn('child content init');
+        console.log("aftercontentinit -"+this.projectContent);
+
   }
 }

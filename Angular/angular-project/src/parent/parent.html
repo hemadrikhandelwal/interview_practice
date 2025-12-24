@@ -6,6 +6,8 @@
 
 @if(showChild){
 
-    <app-child [nameofChannel]="channelName"></app-child>
+    <app-child [nameofChannel]="channelName">
+        <h2 #parentTempl> this is my content for child </h2>
+    </app-child>
 
 }

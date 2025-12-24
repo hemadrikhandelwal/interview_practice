@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   standalone:true,
 })
 export class Parent {
-channelName = '';
+  channelName = 'hemadri';
   showChild :boolean = true;
 
   constructor(){
@@ -28,6 +28,11 @@ channelName = '';
 
   ngOnChanges(){
     console.warn('the onchnage of parent');
+  }
+
+  
+  ngAfterContentInit(){
+    console.warn('parents aftercontent init');
   }
 
   
