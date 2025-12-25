@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ContentChild, Input, SimpleChange } from '@angular/core';
+import { Component, ContentChild, input, Input, SimpleChange } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,7 @@ export class Child {
   
   @Input() nameofChannel =''; 
 
+  @Input() childName:any ; 
   @ContentChild('parentTempl') projectContent:any;
 
   constructor(){

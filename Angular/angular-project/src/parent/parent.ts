@@ -14,6 +14,8 @@ export class Parent {
   channelName = 'hemadri';
   showChild :boolean = true;
 
+  parentName = 'papapa';
+
   constructor(){
     console.warn('prent constructor is called')
   }
