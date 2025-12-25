@@ -16,32 +16,12 @@ export class Parent {
 
   parentName = 'papapa';
 
-  constructor(){
-    console.warn('prent constructor is called')
-  }
-
-  ngOnInit(){
-    console.warn("parent oninit is called");
-  }
-
-  ngDoCheck(){
-    console.warn("parent  do check ");
-  }
-
-  ngOnChanges(){
-    console.warn('the onchnage of parent');
-  }
-
-  
-  ngAfterContentInit(){
-    console.warn('parents aftercontent init');
-  }
-
-  
-  
-
   togglechild(){
     this.showChild = !this.showChild;
+  }
+
+  receiveMessage(event:any){
+    console.warn(" parentsss", event);
   }
 
 }

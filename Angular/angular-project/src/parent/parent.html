@@ -14,5 +14,6 @@
 }
 
 
-    <app-child [childName]="parentName"></app-child>
+    <app-child [childName]="parentName" (sendMessageEmitter)="receiveMessage($event)"></app-child>
+
 
