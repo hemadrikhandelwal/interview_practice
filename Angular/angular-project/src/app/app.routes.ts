@@ -5,6 +5,7 @@ import { LifeCycle } from '../life-cycle/life-cycle';
 import { Parent } from '../parent/parent';
 import { ChangeDetection } from '../change-detection/change-detection';
 import { Signals } from '../signals/signals';
+import { CustomPipe } from '../custom-pipe/custom-pipe';
 
 export const routes: Routes = [
     
@@ -24,6 +25,9 @@ export const routes: Routes = [
         path:'change',component:ChangeDetection
     },{
         path:'signals',component:Signals
+    },
+    {
+        path:'pipe',component:CustomPipe
     }
 
 ];
