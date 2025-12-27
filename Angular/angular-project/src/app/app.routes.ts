@@ -7,6 +7,7 @@ import { ChangeDetection } from '../change-detection/change-detection';
 import { Signals } from '../signals/signals';
 import { CustomPipe } from '../custom-pipe/custom-pipe';
 import { ViewEncapsulation } from '../view-encapsulation/view-encapsulation';
+import { ContentProjection } from '../content-projection/content-projection';
 
 export const routes: Routes = [
     
@@ -32,6 +33,9 @@ export const routes: Routes = [
     },
     {
         path:'view',component:ViewEncapsulation
+    },
+    {
+        path:'content',component:ContentProjection
     }
 
 ];
