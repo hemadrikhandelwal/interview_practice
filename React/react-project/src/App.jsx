@@ -1,11 +1,15 @@
 import React from 'react'
+import MovieCard from './components/MovieCard'
+import Home from './pages/Home' 
 
 const App = () => {
   return (
-    <div>
-      APP
-    </div>
+    <>
+    <Home />
+    </>
   )
 }
+
+
 
 export default App
