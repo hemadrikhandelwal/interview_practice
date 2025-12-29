@@ -1,3 +1,6 @@
+import '../css/MovieCard.css'
+
+
 const MovieCard=({movie})=>{
 
     function onFavoriteClick(){

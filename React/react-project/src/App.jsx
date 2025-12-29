@@ -1,15 +1,22 @@
 import React from 'react'
 import MovieCard from './components/MovieCard'
+import "./css/App.css";
 import Home from './pages/Home' 
+import { Routes,Route } from 'react-router-dom'
+import Favorite from './pages/Favorite'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <>
-    <Home />
+    <Navbar/>
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/favorite" element={<Favorite/>}></Route>
+      </Routes>
+    </main>
     </>
   )
 }
-
-
-
 export default App
